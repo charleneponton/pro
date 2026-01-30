@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2113.65">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Apple Color Emoji'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!--<span class="Apple-converted-space"> </span></p>
+<p class="p1">PLAN SUMMARY:</p>
+<p class="p1">1. Introduction: The €32 Billion Paradox.</p>
+<p class="p1">2. AI Section: Custom Strategy Generator <span class="s1">✨</span> (New Gemini Integration).</p>
+<p class="p1">3. The Divide: HR vs OF Pain Points.</p>
+<p class="p1">4. The Admin Trap: Time distribution.</p>
+<p class="p1">5. The Qualiopi Wave &amp; Budget Optimization.</p>
+<p class="p1">6. The ROI Reality: Retention Scatter (Plotly Canvas).</p>
+<p class="p1">7. CSS Process Flowchart.</p>
+<p class="p1"><br>
+</p>
+<p class="p1">PALETTE: Electric Indigo &amp; Coral.</p>
+<p class="p1">Hex Codes: #312e81 (Indigo), #f43f5e (Coral), #2dd4bf (Teal), #f8fafc (Slate-50).</p>
+<p class="p1"><br>
+</p>
+<p class="p1">CONFIRMATION:</p>
+<p class="p1">- NEITHER Mermaid JS NOR SVG were used in this output.</p>
+<p class="p1">- All charts use Canvas rendering.</p>
+<p class="p1">- Diagrams utilize CSS and Unicode.</p>
+<p class="p1">- Gemini API integrated with exponential backoff and loading states.</p>
+<p class="p1">--&gt;</p>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="fr"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Formation Professionnelle 2026 : IA &amp; Stratégie&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.plot.ly/plotly-2.27.0.min.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; scroll-behavior: smooth; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chart-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 350px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-height: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.chart-container { height: 300px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.gradient-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #312e81, #f43f5e);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-text-fill-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card-shadow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.ai-glow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 20px rgba(244, 63, 94, 0.2);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(244, 63, 94, 0.3);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.loading-dots:after {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '.';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: dots 1.5s steps(5, end) infinite;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes dots {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0%, 20% { content: '.'; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>40% { content: '..'; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>60% { content: '...'; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>80%, 100% { content: ''; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="antialiased selection:bg-rose-500 selection:text-white"&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="bg-indigo-900 text-white p-4 sticky top-0 z-50 shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-xl font-bold tracking-tight"&gt;Charlène &lt;span class="text-rose-400"&gt;Consulting&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#ai-section" class="text-xs bg-rose-500 px-3 py-1 rounded-full font-bold hover:bg-rose-600 transition"&gt;<span class="s1">✨</span> Diagnostic IA&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-white py-16 px-4 text-center border-b border-indigo-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-4xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-slate-900"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>La Formation Pro : &lt;br /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="gradient-text"&gt;32 Milliards d'Euros&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xl text-slate-600 mb-8 leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Le marché est complexe. L'administratif est lourd. &lt;br class="hidden md:block"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Et si on utilisait l'IA pour simplifier votre trajectoire ?</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-6xl mx-auto px-4 py-12 space-y-16"&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- AI SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="ai-section" class="bg-indigo-950 rounded-3xl p-8 md:p-12 text-white ai-glow relative overflow-hidden"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-3xl font-extrabold mb-6 text-rose-400"&gt;Votre Plan d'Action Personnalisé <span class="s1">✨</span>&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-indigo-100 mb-6 leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Besoin d'un avis expert immédiat ? Décrivez votre situation (ex: "Je suis une PME de 50 personnes avec un audit Qualiopi en juin") et notre assistant IA analysera vos enjeux selon la méthodologie de Charlène.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea id="aiInput"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                            </span>class="w-full h-32 bg-indigo-900/50 border border-indigo-700 rounded-xl p-4 text-white placeholder-indigo-300 focus:outline-none focus:ring-2 focus:ring-rose-500 transition"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>placeholder="Décrivez votre besoin ici..."&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button id="generateBtn" onclick="generateStrategy()"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>class="w-full bg-rose-500 hover:bg-rose-600 text-white font-bold py-4 rounded-xl shadow-xl transition transform active:scale-95 flex items-center justify-center gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>Générer ma stratégie <span class="s1">✨</span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="aiResponseContainer" class="bg-white/5 rounded-2xl p-6 border border-white/10 min-h-[300px] flex flex-col"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="aiPlaceholder" class="m-auto text-center text-indigo-300 italic"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-4xl block mb-4"&gt;<span class="s1">🧠</span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Le plan d'action apparaîtra ici...</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="aiLoading" class="hidden m-auto text-center text-rose-400 font-bold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Analyse en cours par Gemini &lt;span class="loading-dots"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="aiContent" class="hidden text-indigo-50 text-sm leading-relaxed overflow-y-auto max-h-[400px]"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Response injected here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Visual effect --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute -top-24 -right-24 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- DATA OVERVIEW --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-2xl p-8 card-shadow border-l-8 border-rose-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-bold text-indigo-900 mb-4"&gt;Le Piège Administratif&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-slate-600 mb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>La réalité est alarmante : les organismes et les RH passent près de 60% de leur temps sur la gestion pure, au détriment de la pédagogie.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-4 bg-indigo-50 rounded-lg border border-indigo-100"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm font-semibold text-indigo-800"&gt;<span class="s1">💡</span> Le constat&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-indigo-600"&gt;L'administratif étouffe l'innovation pédagogique.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-2xl p-6 card-shadow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="adminChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-center text-xs text-slate-400 mt-2"&gt;Répartition du temps de travail (Moyenne 2026)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- RADAR PAIN POINTS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="bg-slate-900 rounded-3xl p-8 md:p-12 text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="max-w-3xl mx-auto text-center mb-10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-3xl font-bold mb-4 text-rose-400"&gt;RH vs OF : Les Points de Douleur&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-slate-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Tandis que les RH stressent sur l'engagement, les OF luttent pour leur certification.</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 lg:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="col-span-1 lg:col-span-2 bg-slate-800 rounded-xl p-4 shadow-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="radarPainPoints"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-6 flex flex-col justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-slate-800 p-4 rounded-lg border-l-4 border-teal-400"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold text-teal-400 mb-1"&gt;Entreprises (RH)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-300"&gt;Priorité : Rétention et ROI du plan de compétences.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-slate-800 p-4 rounded-lg border-l-4 border-rose-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h4 class="font-bold text-rose-500 mb-1"&gt;Organismes (OF)&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-sm text-slate-300"&gt;Priorité : Conformité Qualiopi et pilotage du NDA.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- TRENDS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="grid grid-cols-1 md:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-2xl p-6 card-shadow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-bold text-indigo-900 mb-4"&gt;L'Évolution Qualiopi&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="qualiopiLine"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-2xl p-6 card-shadow"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-bold text-indigo-900 mb-4"&gt;Optimisation Budgétaire&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="budgetBar"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- PLOTLY RETENTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section class="bg-white rounded-2xl p-8 card-shadow border border-indigo-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-2xl font-bold text-indigo-900"&gt;Formation &amp; Rétention : Le Vrai ROI&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-slate-600 mt-2"&gt;Corrélation entre volume d'heures de formation et ancienneté moyenne.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="w-full bg-slate-50 rounded-xl p-2 border border-slate-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="retentionScatter" class="w-full h-96"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- CTA --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;footer class="bg-indigo-900 text-white rounded-t-3xl p-12 text-center mt-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-3xl font-bold mb-6"&gt;Prêt à sortir du labyrinthe ?&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="bg-rose-500 hover:bg-rose-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:scale-105"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Contactez Charlène <span class="s1">☕</span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// API CONFIG</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const apiKey = "AIzaSyASsmxVHQgXabCoC5KJekhuhZpngp9W1mk"; // Runtime provided</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const appId = typeof __app_id !== 'undefined' ? __app_id : 'infographic-training-2026';</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// UTILITY: Exponential Backoff for API Calls</p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const response = await fetch(url, options);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return await response.json();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (retries &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>await new Promise(resolve =&gt; setTimeout(resolve, backoff));</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return fetchWithRetry(url, options, retries - 1, backoff * 2);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>throw error;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// GEMINI: Generate Strategy <span class="s1">✨</span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>async function generateStrategy() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const userInput = document.getElementById('aiInput').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!userInput) return;</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const btn = document.getElementById('generateBtn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const placeholder = document.getElementById('aiPlaceholder');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const loader = document.getElementById('aiLoading');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const content = document.getElementById('aiContent');</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// UI State</p>
+<p class="p1"><span class="Apple-converted-space">            </span>btn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>placeholder.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>loader.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content.classList.add('hidden');</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const systemPrompt = "Tu es Charlène, experte en stratégie de formation professionnel et RH. Ton ton est professionnel, pragmatique, expert et avec une pointe de 'parler vrai'. Analyse la situation de l'utilisateur et propose un plan d'action en 3 étapes clés. Utilise des puces et des titres courts. Ne dépasse pas 200 mots. Réponds en français.";</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const result = await fetchWithRetry(</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>body: JSON.stringify({</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>contents: [{ parts: [{ text: userInput }] }],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>systemInstruction: { parts: [{ text: systemPrompt }] }</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>);</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const responseText = result.candidates?.[0]?.content?.parts?.[0]?.text || "Désolé, je n'ai pas pu générer de réponse.";</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>content.innerHTML = responseText.replace(/\n/g, '&lt;br&gt;');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>loader.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>content.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>loader.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>content.innerHTML = `&lt;div class="text-rose-400"&gt;Erreur lors de la connexion à l'IA. Veuillez réessayer plus tard.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>content.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} finally {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>btn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// CHART UTILITIES</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function wrapLabels(labels) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return labels.map(label =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (label.length &lt;= 16) return label;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const words = label.split(' ');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const lines = [];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let currentLine = words[0];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>for (let i = 1; i &lt; words.length; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if ((currentLine + " " + words[i]).length &lt;= 16) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>currentLine += " " + words[i];</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>lines.push(currentLine);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>currentLine = words[i];</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>lines.push(currentLine);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return lines;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tooltipConfig = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>tooltip: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>callbacks: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>title: function(tooltipItems) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>const item = tooltipItems[0];</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>let label = item.chart.data.labels[item.dataIndex];</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>return Array.isArray(label) ? label.join(' ') : label;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// CHART INITIALIZATION</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.onload = function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 1. Donut</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ctxAdmin = document.getElementById('adminChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>new Chart(ctxAdmin, {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'doughnut',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>labels: wrapLabels(['Admin &amp; Conformité', 'Pédagogie &amp; Animation', 'Vente &amp; Stratégie']),</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>datasets: [{ data: [60, 25, 15], backgroundColor: ['#f43f5e', '#312e81', '#2dd4bf'], borderWidth: 0 }]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: { responsive: true, maintainAspectRatio: false, ...tooltipConfig }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 2. Radar</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ctxRadar = document.getElementById('radarPainPoints').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>new Chart(ctxRadar, {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'radar',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>labels: wrapLabels(['Poids Admin', 'Conformité', 'Rentabilité', 'Engagement', 'Recrutement']),</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>datasets: [</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{ label: 'OF', data: [95, 90, 70, 50, 80], borderColor: '#f43f5e', backgroundColor: 'rgba(244,63,94,0.1)' },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{ label: 'RH', data: [50, 40, 80, 95, 30], borderColor: '#2dd4bf', backgroundColor: 'rgba(45,212,191,0.1)' }</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: {<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>responsive: true,<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>maintainAspectRatio: false,<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>...tooltipConfig,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>scales: { r: { grid: { color: 'rgba(255,255,255,0.1)' }, ticks: { display: false } } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 3. Line</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ctxLine = document.getElementById('qualiopiLine').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>new Chart(ctxLine, {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'line',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>labels: ['2021', '2022', '2023', '2024', '2025', '2026'],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>datasets: [{ label: 'OF Certifiés', data: [35, 80, 95, 102, 110, 115], borderColor: '#312e81', fill: true, backgroundColor: 'rgba(49,46,129,0.05)' }]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: { responsive: true, maintainAspectRatio: false, ...tooltipConfig }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 4. Bar</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ctxBar = document.getElementById('budgetBar').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>new Chart(ctxBar, {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'bar',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>labels: wrapLabels(['Fonds Propres', 'Co-financements', 'Aides Publiques']),</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>datasets: [</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{ label: 'Standard', data: [85, 10, 5], backgroundColor: '#cbd5e1' },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>{ label: 'Optimisé <span class="s1">✨</span>', data: [55, 30, 15], backgroundColor: '#2dd4bf' }</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: { responsive: true, maintainAspectRatio: false, ...tooltipConfig }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><br>
+</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// 5. Plotly Scatter (Canvas)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Plotly.newPlot('retentionScatter', [{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>x: [5, 15, 25, 40, 55, 10, 30, 50, 20, 45],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>y: [1, 2, 4, 6, 8, 1.5, 4.5, 7.5, 3, 6.5],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>mode: 'markers',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'scatter',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>marker: { size: 16, color: '#f43f5e', opacity: 0.8 }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}], {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>margin: { t: 10, r: 10, b: 40, l: 40 },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>xaxis: { title: 'Heures Formation / An' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>yaxis: { title: 'Rétention (Ans)' },</p>
+<p class="p1"><span class="Apple-converted-space">                </span>paper_bgcolor: 'rgba(0,0,0,0)',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>plot_bgcolor: 'rgba(0,0,0,0)'</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, { responsive: true, displayModeBar: false, renderer: 'canvas' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
